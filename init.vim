@@ -90,6 +90,11 @@ map <C-n> :NERDTreeToggle<CR>
 " 他のバッファをすべて閉じたときにNERDTreeが開いてきたらNERDTreeも同時に閉じる
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" ==============================
+" Rainbow設定
+" ------------------------------
+let g:rainbow_active = 1
+
 " ============================
 " カラースキーム
 " ----------------------------
