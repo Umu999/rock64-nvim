@@ -44,6 +44,8 @@ repo = 'cohama/lexima.vim'
 [[plugins]]
 repo = 'tpope/vim-surround'
 
+[[plugins]]
+repo = 'luochen1990/rainbow'
 # ===================================
 # 補完／スニペット
 # ..............................
