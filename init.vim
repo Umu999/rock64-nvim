@@ -6,7 +6,6 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set number
-set cursorline
 set encoding=utf-8
 set incsearch
 
@@ -106,3 +105,9 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 syntax on
 colorscheme night-owl
+"colorscheme molokai
+
+" カーソル行ハイライト
+set cursorline
+highlight CursorLine gui=underline guifg=NONE guibg=NONE
+
