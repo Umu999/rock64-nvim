@@ -1,0 +1,212 @@
+# dein自体もdeinで管理
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# deinのコマンド呼び出しラッパー。オリジナルコマンドの:Dein listが便利
+[[plugins]]
+repo = 'haya14busa/dein-command.vim'
+
+# 並列実行（Vim8でいるのか不明)
+[[plugins]]
+repo = 'Shougo/vimproc'
+host_post_update = 'make'
+
+[[plugins]]
+# ステータスライン拡張
+repo = "itchyny/lightline.vim"
+
+# 行単位で移動させる(Ctrl+kで上、Ctrl+jで下に移動)
+[[plugins]]
+repo = 'matze/vim-move'
+
+# ===================================
+# Git
+# ..................
+# Gitコマンド (Gstatus便利すぎ)
+[[plugins]]
+repo = "tpope/vim-fugitive"
+
+# Git差分をGutter（行数の左の列）に表示
+[[plugins]]
+repo = "airblade/vim-gitgutter"
+
+# =========================================
+# 括弧
+# ..........................................
+# 括弧閉じ
+[[plugins]]
+repo = 'cohama/lexima.vim'
+
+# ダブルクォートをシングルクォートにするとか
+# ビジュアルモードで文字列選択→ S + ' でシングルクォートで囲う
+# ノーマルモードでシングルクォートで囲まれた部分にカーソル配置→ cs + ' + " でシングルクォートをダブルクォートに変更
+# 括弧などに対しても使える
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+# ===================================
+# 補完／スニペット
+# ..............................
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+depends = ['Shougo/neoinclude.vim', 'Shougo/context_filetype.vim']
+insert = 1
+
+[[plugins]]
+repo = 'Shougo/neosnippet'
+
+# neosnippet用スニペット詰め合わせ。Dockerfileはない。。。
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+# neosnippetとは別のスニペットプラグイン。衝突が不安。
+[[plugins]]
+repo = 'garbas/vim-snipmate'
+depends = ['addon-mw-utils', 'tlib']
+
+# snipmate依存パッケージ
+[[plugins]]
+repo = 'MarcWeber/vim-addon-mw-utils'
+
+# snipmate依存パッケージ
+[[plugins]]
+repo = 'tomtom/tlib_vim'
+
+# snipmate用スニペット詰め合わせ。またしてもDockerfileはない
+[[plugins]]
+repo = 'honza/vim-snippets'
+
+# snipmate用Dockerfile/docker-compose.ymlスニペット
+[[plugins]]
+repo = 'ekalinin/Dockerfile.vim'
+filetypes = ['Dockerfile', 'yaml']
+
+# Rust
+# ---------------------------------------------
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+filetypes = ['rs']
+
+# C/C++
+# ---------------------------------------------
+[[plugins]]
+repo = 'justmao945/vim-clang'
+filetypes = ['c', 'cpp']
+
+# PureScript
+# ---------------------------------------------
+[[plugins]]
+repo = 'purescript-contrib/purescript-vim'
+filetypes = ['purs']
+
+[[plugins]]
+repo = 'FrigoEU/psc-ide-vim'
+filetypes = ['purs']
+
+# JavaScript/HTML/CSS
+# ----------------------------------------------
+[[plugins]]
+repo = 'marijnh/tern_for_vim'
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+filetypes = ['typescript']
+
+# JavaScript/Typescriptのインデント補完
+[[plugins]]
+repo = 'jason0x43/vim-js-indent'
+filetypes = ['javascript', 'typescript', 'html']
+
+# TSServerのクライアント。Typescriptに関してIDEのように使えるようになる
+[[plugins]]
+repo = 'Quramy/tsuquyomi'
+filetypes = ['typescript']
+
+# HTML自動生成（li*3で<li><\li>が3つ出る)
+[[plugins]]
+repo = 'mattn/emmet-vim'
+filetype = ['html', 'css']
+
+# ES6に対応したJS補完
+[[plugins]]
+repo = 'othree/yajs.vim'
+filetypes = ['javascript']
+
+# ES7とかにも対応したシンタックスハイライト
+[[plugins]]
+repo = 'othree/es.next.syntax.vim'
+filetypes = ['javascript']
+
+# AngularJS（Angularじゃない？）やjQueryに対応したシンタックス
+[[plugins]]
+repo = 'othree/javascript-libraries-syntax.vim'
+filetypes = ['javascript']
+
+# JSON
+# -------------------------------------------
+# JSONのハイライト。ダブルクォートを消して表示する
+[[plugins]]
+repo = 'elzr/vim-json'
+filetypes = ['json']
+
+# Docker
+# -------------------------------------------
+[[plugins]]
+repo = 'ekalinin/Dockerfile.vim'
+filetypes = ['Dockerfile']
+
+# ===========================================
+# インデント/空白文字
+# ...........................................
+# 余計な空白文字をハイライト
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
+
+# インデントを見やすく表示
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+
+# ==============================
+# Lint
+# ..............................
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
+[[plugins]]
+repo = 'osyo-manga/shabadou.vim'
+
+[[plugins]]
+repo = 'w0rp/ale'
+
+[[plugins]]
+repo = 'dannyob/quickfixstatus'
+
+[[plugins]]
+repo = 'KazuakiM/vim-qfsigns'
+
+# ====================================
+# カラースキーム
+# ....................................
+[[plugins]]
+repo = 'flazz/vim-colorschemes'
+
+[[plugins]]
+repo = 'stulzer/heroku-colorscheme'
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+
+[[plugins]]
+repo = 'ujihisa/unite-colorscheme'
+
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+
+[[plugins]]
+repo = 'haishanh/night-owl.vim'
+
+# ====================================
+# ファイル操作
+# ------------------------------------
+[[plugins]]
+repo = 'scrooloose/nerdtree'
