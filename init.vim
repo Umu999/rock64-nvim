@@ -51,6 +51,7 @@ call dein#load_toml(s:toml_dir . '/lazy.toml', {'lazy': 1})
 if has('python')
 	call dein#load_toml(s:toml_dir . '/python.toml', {'lazy': 1})
 endif
+call dein#load_toml(s:toml_dir . '/elm.toml', {'lazy': 1})
 
 call dein#end()
 call dein#save_state()
