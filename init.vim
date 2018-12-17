@@ -9,10 +9,9 @@ set number
 set encoding=utf-8
 set incsearch
 
-
-
 " nvimにpyenvでグローバルにインストールされたpythonを認識させる設定
-let g:python_host_prog = expand('~/.pyenv/shims/python')
+let g:python_host_prog = '/home/rock64/.pyenv/shims/python'
+let g:python3_host_prog = '/home/rock64/.pyenv/shims/python3'
 
 " ディレクトリ設定
 let $CACHE = expand('$HOME/.cache')
