@@ -46,6 +46,27 @@ repo = 'tpope/vim-surround'
 
 [[plugins]]
 repo = 'luochen1990/rainbow'
+hook_add = '''
+    let g:rainbow_conf = {
+    \   'ctermfgs': [44, 154, 220, 209, 202, 200],
+    \   'guifgs': ['DarkTurquoise', 'GreenYellow', 'Gold1', 'Salmon1', 'OrangeRed1', 'Magenta2']
+    \}
+
+'''
+
+# 対応する括弧のハイライト
+# set showmatchが使いにくいため
+[[plugins]]
+repo = 'itchyny/vim-parenmatch'
+hook_add='''
+    let g:loaded_matchparen = 1
+'''
+# ===================================
+# カーソル
+# ...................................
+[[plugins]]
+repo = 'terryma/vim-multiple-cursors'
+
 # ===================================
 # 補完／スニペット
 # ..............................
@@ -54,17 +75,25 @@ repo = 'Shougo/deoplete.nvim'
 on_event = 'InsertCharPre'
 hook_add = '''
     let g:deoplete#enable_at_startup = 1
-    let g:deoplete#auto_complete_delay = 0
+    let g:deoplete#auto_complete_delay = 100
     let g:deoplete#auto_complete_start_length = 1
-    let g:deoplete#enable_camel_case = 0
-    let g:deoplete#enable_reflesh_always = 0
+    let g:deoplete#enable_smart_case = 1
+    let g:deoplete#enable_reflesh_always = 1
     let g:deoplete#file#enable_buffer_path = 1
     let g:deoplete#max_list = 10000
+    inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+    inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 '''
 on_i = 1
 
 [[plugins]]
 repo = 'Shougo/neosnippet'
+hook_add = '''
+    let g:neosnippet#enable_completed_snippet
+    imap <Enter> <Plug>(neosnippet_expand_or_jump)
+    smap <Enter> <Plug>(neosnippet_expand_or_jump)
+    xmap <Enter> <Plug>(neosnippet_expand_or_target)
+'''
 
 # neosnippet用スニペット詰め合わせ。Dockerfileはない。。。
 [[plugins]]
@@ -182,6 +211,13 @@ repo = 'Yggdroot/indentLine'
 # ..............................
 [[plugins]]
 repo = 'thinca/vim-quickrun'
+hook_add = '''
+    let g:quickrun_config = {
+    \    'watchdogs_checker/_' : {
+    \        'hook/qfsignes_update/enable_exit': 1,
+    \        'hook/qfsignes_update/priority_exit': 3,},
+    \    }
+'''
 
 [[plugins]]
 repo = 'osyo-manga/shabadou.vim'
@@ -194,6 +230,9 @@ repo = 'dannyob/quickfixstatus'
 
 [[plugins]]
 repo = 'KazuakiM/vim-qfsigns'
+hook_add = '''
+    let g:qfsigns#AutoJump = 1
+'''
 
 # ====================================
 # カラースキーム

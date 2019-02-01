@@ -1,0 +1,3 @@
+[[plugins]]
+repo = 'mattn/emmet-vim'
+filetypes = ['html', 'tera']
