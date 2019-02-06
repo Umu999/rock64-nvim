@@ -260,3 +260,9 @@ repo = 'haishanh/night-owl.vim'
 # ------------------------------------
 [[plugins]]
 repo = 'scrooloose/nerdtree'
+
+# ==================================
+# バイナリエディタ
+# -----------------------------------
+[[plugins]]
+repo = 'Shougo/vinarise'
